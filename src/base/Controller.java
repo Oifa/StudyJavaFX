@@ -37,12 +37,19 @@ public class Controller {
     @FXML
     private JFXButton btnForward;
 
-    //@FXML
-    //private Label time;
-   // private static final String EMPTY_TIME_STRING = "00:00/00:00";
+    @FXML
+    private Label timer;
 
-    Media media = new Media(new File("B:/Programs/Java/StudyJavaFX/src/base/vacation-1.mp3").toURI().toString());
+   // private static final String EMPTY_TIME_STRING = "00:00/00:00";
+    String path = "B:/Programs/Java/StudyJavaFX/src/base/vacation-1.mp3";
+    Media media = new Media(new File(path).toURI().toString());
     MediaPlayer mediaPlayer = new MediaPlayer(media);
+
+
+    time = new Label();
+    timer =
+
+
 
     @FXML
     public void Play() {
@@ -86,16 +93,21 @@ public class Controller {
     @FXML
     public void Open() {
         btnOpen.setOnAction((ActionEvent e) -> {
-            FileChooser fc = new FileChooser();
-            fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("mp3", "All files", "*.*"));
-            File file = fc.showOpenDialog(null);
-            String path = file.getAbsolutePath();
-            path = path.replace("\\", "/");
-            media = new Media(new File(path).toURI().toString());
-            mediaPlayer.stop();
-            mediaPlayer = new MediaPlayer(media);
-            mediaPlayer.setAutoPlay(true);
-            //mediaView.setMediaPlayer(mediaPlayer);
+            try {
+                FileChooser fc = new FileChooser();
+                fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("mp3", "All files", "*.*"));
+                File file = fc.showOpenDialog(null);
+                String path = file.getAbsolutePath();
+                path = path.replace("\\", "/");
+                media = new Media(new File(path).toURI().toString());
+                mediaPlayer.stop();
+                mediaPlayer = new MediaPlayer(media);
+                mediaPlayer.setAutoPlay(true);
+                //mediaView.setMediaPlayer(mediaPlayer);
+            } catch (Exception e1) {
+                System.out.println("Exit");
+            }
+
         });
     }
 
