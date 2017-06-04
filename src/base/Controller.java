@@ -20,36 +20,14 @@ import java.io.File;
 public class Controller {
 
     @FXML
-    private JFXButton btnStop;
-
-    @FXML
-    private JFXButton btnPlay;
-
-    @FXML
-    private JFXButton btnPause;
-
-    @FXML
-    private JFXButton btnOpen;
-
-    @FXML
-    private JFXButton btnBack;
-
-    @FXML
-    private JFXButton btnForward;
+    private JFXButton btnStop, btnPlay, btnPause, btnOpen, btnBack, btnForward;
 
     @FXML
     private Label timer;
 
-   // private static final String EMPTY_TIME_STRING = "00:00/00:00";
-    String path = "B:/Programs/Java/StudyJavaFX/src/base/vacation-1.mp3";
-    Media media = new Media(new File(path).toURI().toString());
+
+    Media media = new Media(new File("B:/Programs/Java/StudyJavaFX/src/base/vacation-1.mp3").toURI().toString());
     MediaPlayer mediaPlayer = new MediaPlayer(media);
-
-
-    time = new Label();
-    timer =
-
-
 
     @FXML
     public void Play() {
@@ -93,21 +71,16 @@ public class Controller {
     @FXML
     public void Open() {
         btnOpen.setOnAction((ActionEvent e) -> {
-            try {
-                FileChooser fc = new FileChooser();
-                fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("mp3", "All files", "*.*"));
-                File file = fc.showOpenDialog(null);
-                String path = file.getAbsolutePath();
-                path = path.replace("\\", "/");
-                media = new Media(new File(path).toURI().toString());
-                mediaPlayer.stop();
-                mediaPlayer = new MediaPlayer(media);
-                mediaPlayer.setAutoPlay(true);
-                //mediaView.setMediaPlayer(mediaPlayer);
-            } catch (Exception e1) {
-                System.out.println("Exit");
-            }
-
+            FileChooser fc = new FileChooser();
+            fc.getExtensionFilters().add(new FileChooser.ExtensionFilter("*.mp3", "All files", "*.*"));
+            File file = fc.showOpenDialog(null);
+            String path = file.getAbsolutePath();
+            path = path.replace("\\", "/");
+            media = new Media(new File(path).toURI().toString());
+            mediaPlayer.stop();
+            mediaPlayer = new MediaPlayer(media);
+            mediaPlayer.setAutoPlay(true);
+            //mediaView.setMediaPlayer(mediaPlayer);
         });
     }
 
