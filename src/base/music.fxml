@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXSlider?>
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Label?>
@@ -20,7 +19,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="base.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="base.Controller">
    <children>
       <Pane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #1C202A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -117,17 +116,35 @@
                <children>
                   <BorderPane prefHeight="541.0" prefWidth="557.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <bottom>
-                        <GridPane alignment="CENTER" prefHeight="125.0" prefWidth="602.0" BorderPane.alignment="CENTER">
+                        <GridPane alignment="CENTER" prefHeight="139.0" prefWidth="754.0" BorderPane.alignment="CENTER">
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                            </columnConstraints>
                            <rowConstraints>
-                              <RowConstraints maxHeight="87.0" minHeight="10.0" prefHeight="71.0" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="79.0" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="113.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="79.0" minHeight="0.0" prefHeight="26.0" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
-                              <HBox alignment="CENTER" prefHeight="75.0" prefWidth="602.0">
+                              <HBox alignment="CENTER">
                                  <children>
+                                    <JFXButton fx:id="btnReload" contentDisplay="TOP" onAction="#Reload" ripplerFill="#1f8fe8" text="Заново">
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/ic_replay_black_48dp.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="btnPrev" contentDisplay="TOP" onAction="#Prev" ripplerFill="#1f8fe8" text="Предыдущая">
+                                       <graphic>
+                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/ic_skip_previous_black_48dp.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
                                     <JFXButton fx:id="btnBack" contentDisplay="TOP" onAction="#Back" ripplerFill="#1f8fe8" text="Назад">
                                        <graphic>
                                           <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
@@ -137,9 +154,9 @@
                                           </ImageView>
                                        </graphic>
                                     </JFXButton>
-                                    <JFXButton fx:id="btnStop" contentDisplay="TOP" onAction="#Stop" ripplerFill="#1f8fe8" text="Пауза">
+                                    <JFXButton fx:id="btnStop" contentDisplay="TOP" onAction="#Stop" ripplerFill="#1f8fe8" text="Стоп">
                                        <graphic>
-                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../img/ic_stop_black_48dp.png" />
                                              </image>
@@ -148,19 +165,25 @@
                                              </viewport>
                                           </ImageView>
                                        </graphic>
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
                                     </JFXButton>
                                     <JFXButton fx:id="btnPlay" contentDisplay="TOP" onAction="#Play" ripplerFill="#1f8fe8" text="Играть">
                                        <graphic>
-                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../img/ic_play_arrow_black_48dp.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
                                     </JFXButton>
                                     <JFXButton fx:id="btnPause" contentDisplay="TOP" onAction="#Pause" ripplerFill="#1f8fe8" text="Пауза">
                                        <graphic>
-                                          <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                          <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../img/ic_pause_black_48dp.png" />
                                              </image>
@@ -176,33 +199,53 @@
                                           </ImageView>
                                        </graphic>
                                     </JFXButton>
-                                    <JFXButton contentDisplay="TOP" ripplerFill="#1f8fe8" text="Громкость">
+                                    <JFXButton fx:id="btnNext" contentDisplay="TOP" onAction="#Next" ripplerFill="#1f8fe8" text="Следующая">
                                        <graphic>
                                           <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../img/ic_volume_up_black_48dp.png" />
+                                                <Image url="@../img/ic_skip_next_black_48dp.png" />
                                              </image>
                                           </ImageView>
                                        </graphic>
                                     </JFXButton>
-                                    <JFXSlider fx:id="volume" blockIncrement="0.0" prefHeight="28.0" prefWidth="140.0" value="100.0">
-                                       <HBox.margin>
-                                          <Insets top="20.0" />
-                                       </HBox.margin>
-                                    </JFXSlider>
+                                    <Slider fx:id="volumeSlider" prefHeight="40.0" prefWidth="116.0" />
                                  </children>
                                  <GridPane.margin>
                                     <Insets />
                                  </GridPane.margin>
                               </HBox>
-                              <Slider fx:id="state" GridPane.rowIndex="1" />
+                              <HBox alignment="CENTER" GridPane.rowIndex="1">
+                                 <children>
+                                    <Label fx:id="currentTime" prefHeight="26.0" prefWidth="49.0" text="00:00" textAlignment="RIGHT">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="2.0" />
+                                       </padding>
+                                    </Label>
+                                    <Slider fx:id="stateSlider" max="215.0" prefHeight="24.0" prefWidth="657.0">
+                                       <padding>
+                                          <Insets left="2.0" />
+                                       </padding>
+                                    </Slider>
+                                    <Label fx:id="totalDuration" prefHeight="4.0" prefWidth="49.0" text="00:00" textAlignment="RIGHT">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets left="2.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
                            </children>
                         </GridPane>
                      </bottom>
                      <right>
                         <AnchorPane prefHeight="500.0" prefWidth="215.0" BorderPane.alignment="CENTER">
                            <children>
-                              <ListView layoutY="30.0" prefHeight="421.0" prefWidth="216.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
+                              <ListView fx:id="listOfSong" layoutY="30.0" prefHeight="421.0" prefWidth="216.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0" />
                               <Label alignment="CENTER" layoutX="82.0" layoutY="4.0" text="Плейлист" textAlignment="CENTER">
                                  <font>
                                     <Font size="16.0" />
@@ -226,14 +269,9 @@
                                     </ImageView>
                                  </graphic>
                               </JFXButton>
-                              <JFXSlider fx:id="stateOfSong" layoutX="-37.0" layoutY="207.0" prefHeight="25.0" prefWidth="209.0" showTickMarks="true" value="0.1" />
-                              <Slider fx:id="volumeSlider" layoutX="18.0" layoutY="264.0" />
                            </children>
                         </AnchorPane>
                      </left>
-                     <center>
-                        <Label fx:id="time" prefHeight="17.0" prefWidth="50.0" text="00.00" textAlignment="RIGHT" BorderPane.alignment="CENTER" />
-                     </center>
                   </BorderPane>
                </children>
             </AnchorPane>

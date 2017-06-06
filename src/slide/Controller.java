@@ -1,87 +1,60 @@
 package slide;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.FileChooser;
-
+import com.jfoenix.controls.JFXButton;
 import java.awt.*;
 import java.io.File;
+import javafx.event.EventHandler;
+import java.util.List;
+import javafx.scene.control.ListView;
+import javafx.stage.FileChooser.ExtensionFilter;
+
+
 
 
 public class Controller {
 
     @FXML
-    private JFXButton btnStop, btnPlay, btnPause, btnOpen, btnBack, btnForward;
-
-
-    Media media = new Media(new File("B:/Programs/Java/StudyJavaFX/src/base/vacation-1.mp3").toURI().toString());
-    MediaPlayer mediaPlayer = new MediaPlayer(media);
+    private JFXButton btnOpens, btnOp;
 
     @FXML
-    private Label time;
-
+    private ListView listImages;
 
     @FXML
-    public void Play() {
-        btnPlay.setOnAction((ActionEvent event) -> {
-            System.out.println("Playing...");
-            mediaPlayer.play();
-            mediaPlayer.currentTimeProperty().addListener((observableValue, oldDuration, newDuration) -> {
-                //System.out.println("Player:" + observableValue + " | Changed from playing at: " + oldDuration + " to play at " + newDuration);
-            });
-
+    public void Opens() {
+        btnOpens.setOnAction((ActionEvent e) -> {
+            FileChooser fc = new FileChooser();
+            fc.setInitialDirectory(new File ("C:/Temp"));
+            fc.getExtensionFilters().addAll(new ExtensionFilter("png files","*.png"));
+            File selectedFile = fc.showOpenDialog(null);
+            if(selectedFile != null){
+                listImages.getItems().add(selectedFile.getAbsolutePath());
+            } else {
+                System.out.println("File is not valid");
+            }
         });
     }
 
     @FXML
-    public void Pause() {
-        btnPause.setOnAction((ActionEvent e) -> {
-            System.out.println("PAUSE");
-            mediaPlayer.pause();
+    public void Op() {
+        btnOp.setOnAction((ActionEvent e) -> {
+            FileChooser fc = new FileChooser();
+            fc.setInitialDirectory(new File("C:/Temp"));
+            fc.getExtensionFilters().addAll(new ExtensionFilter("png files", "*.png"));
+            List<File> selectedFiles = fc.showOpenMultipleDialog(null);
+            if (selectedFiles != null) {
+                for (int i = 0; i < selectedFiles.size(); i++) {
+                    listImages.getItems().add(selectedFiles.get(i).getAbsolutePath());
+                }
+
+            } else {
+                System.out.println("File is not valid");
+            }
         });
     }
-
-    @FXML
-    public void Stop() {
-        btnStop.setOnAction((ActionEvent e) -> {
-            System.out.println("stop");
-            mediaPlayer.stop();
-        });
-    }
-
-    @FXML
-    public void Forward() {
-        btnForward.setOnAction((ActionEvent e) -> {
-            mediaPlayer.seek(mediaPlayer.getCurrentTime().multiply(1.5));
-        });
-    }
-
-    @FXML
-    public void Back() {
-        btnBack.setOnAction((ActionEvent e) -> {
-            mediaPlayer.seek(mediaPlayer.getCurrentTime().divide(1.5));
-        });
-    }
-
-
-    @FXML
-    public void Open() {
-        btnOpen.setOnAction((ActionEvent e) -> {
-            FileChooser fileChooser = new FileChooser();
-            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("*.mp3", "All files", "*.*"));
-            File file = fileChooser.showOpenDialog(null);
-            String path = file.getAbsolutePath();
-            path = path.replace("\\", "/");
-            media = new Media(new File(path).toURI().toString());
-            mediaPlayer.stop();
-            mediaPlayer = new MediaPlayer(media);
-            mediaPlayer.setAutoPlay(true);
-            //mediaView.setMediaPlayer(mediaPlayer);
-        });
-    }
-
 
 }

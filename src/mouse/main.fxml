@@ -53,8 +53,10 @@
                            <children>
                               <VBox layoutX="1.0" layoutY="1.0">
                                  <children>
-                                    <JFXButton onAction="#onSave" text="Сохранить" />
-                                    <JFXButton onAction="#onLoad" text="Открыть" />
+                                    <JFXButton onAction="#Save" text="Сохранить" />
+                                    <JFXButton onAction="#Open" text="Открыть" />
+                                    <JFXButton onAction="#Copy" text="Копировать" />
+                                    <JFXButton onAction="#Paste" text="Вставить" />
                                  </children>
                               </VBox>
                            </children>
