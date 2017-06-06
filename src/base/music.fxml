@@ -6,6 +6,7 @@
 <?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -184,12 +185,7 @@
                                           </ImageView>
                                        </graphic>
                                     </JFXButton>
-                                    <Label fx:id="timer" alignment="CENTER" prefHeight="27.0" prefWidth="90.0" text="00:00/00:00">
-                                       <HBox.margin>
-                                          <Insets top="20.0" />
-                                       </HBox.margin>
-                                    </Label>
-                                    <JFXSlider fx:id="volume" blockIncrement="0.0" prefHeight="28.0" prefWidth="140.0">
+                                    <JFXSlider fx:id="volume" blockIncrement="0.0" prefHeight="28.0" prefWidth="140.0" value="100.0">
                                        <HBox.margin>
                                           <Insets top="20.0" />
                                        </HBox.margin>
@@ -199,11 +195,7 @@
                                     <Insets />
                                  </GridPane.margin>
                               </HBox>
-                              <JFXSlider fx:id="stateOfSong" blockIncrement="0.0" prefHeight="25.0" prefWidth="600.0" style="visibility: #1F8FE8;" GridPane.rowIndex="1">
-                                 <GridPane.margin>
-                                    <Insets top="25.0" />
-                                 </GridPane.margin>
-                              </JFXSlider>
+                              <Slider fx:id="state" GridPane.rowIndex="1" />
                            </children>
                         </GridPane>
                      </bottom>
@@ -234,9 +226,14 @@
                                     </ImageView>
                                  </graphic>
                               </JFXButton>
+                              <JFXSlider fx:id="stateOfSong" layoutX="-37.0" layoutY="207.0" prefHeight="25.0" prefWidth="209.0" showTickMarks="true" value="0.1" />
+                              <Slider fx:id="volumeSlider" layoutX="18.0" layoutY="264.0" />
                            </children>
                         </AnchorPane>
                      </left>
+                     <center>
+                        <Label fx:id="time" prefHeight="17.0" prefWidth="50.0" text="00.00" textAlignment="RIGHT" BorderPane.alignment="CENTER" />
+                     </center>
                   </BorderPane>
                </children>
             </AnchorPane>
