@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="base.Controller">
+   <children>
+      <Pane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #1C202A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="45.0" fitWidth="234.0" layoutX="1.0" layoutY="10.0">
+               <image>
+                  <Image url="@../img/2017-05-31_181224.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <SplitPane dividerPositions="0.24185463659147868" layoutY="57.0" prefHeight="543.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="57.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #1C202A;" SplitPane.resizableWithParent="false">
+               <children>
+                  <VBox layoutX="59.0" layoutY="93.0" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefWidth="190.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXButton contentDisplay="TOP" prefHeight="0.0" prefWidth="2000.0" ripplerFill="WHITE" style="-fx-background-color: #1F8FE8;" text="Музыка" textFill="WHITE" VBox.vgrow="NEVER">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/ic_music_video_black_48dp.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="0.0" prefWidth="2000.0" ripplerFill="WHITE" style="-fx-background-color: #1F8FE8;" text="Слайды" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/ic_photo_black_48dp.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="0.0" prefWidth="2000.0" ripplerFill="WHITE" style="-fx-background-color: #1F8FE8;" text="Видео" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/ic_movie_creation_black_48dp.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="0.0" prefWidth="2000.0" ripplerFill="WHITE" style="-fx-background-color: #1F8FE8;" text="Текст" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/ic_format_align_justify_black_48dp.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="0.0" prefWidth="2000.0" ripplerFill="WHITE" style="-fx-background-color: #1F8FE8;" text="Документы" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/ic_attach_file_black_48dp.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton contentDisplay="TOP" prefHeight="0.0" prefWidth="2000.0" ripplerFill="WHITE" style="-fx-background-color: #1F8FE8;" text="Советы" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/ic_report_problem_black_48dp.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Arial Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <BorderPane prefHeight="541.0" prefWidth="557.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <left>
+                        <AnchorPane prefHeight="396.0" prefWidth="13.0" BorderPane.alignment="CENTER" />
+                     </left>
+                     <top>
+                        <AnchorPane prefHeight="6.0" prefWidth="754.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" layoutX="10.0" text="Советы по использованию программы" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </top>
+                     <right>
+                        <AnchorPane BorderPane.alignment="CENTER" />
+                     </right>
+                     <center>
+                        <AnchorPane BorderPane.alignment="CENTER">
+                           <children>
+                              <VBox layoutX="150.0" layoutY="115.0" prefHeight="500.0" prefWidth="741.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </center>
+                     <bottom>
+                        <AnchorPane prefHeight="16.0" prefWidth="754.0" BorderPane.alignment="CENTER" />
+                     </bottom>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
