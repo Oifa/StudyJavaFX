@@ -19,13 +19,17 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaPlayer.Status;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -34,7 +38,10 @@ import javax.xml.ws.Binding;
 import javax.xml.ws.BindingProvider;
 import javafx.util.Duration;
 import javafx.beans.binding.Bindings;
-
+import javafx.scene.layout.Pane;
+import javafx.fxml.FXMLLoader;
+import java.io.IOException;
+import javafx.scene.layout.AnchorPane;
 
 
 
@@ -50,6 +57,9 @@ public class Controller implements Initializable {
     private Slider stateSlider, volumeSlider;
 
     @FXML
+    private AnchorPane rootPane;
+
+    @FXML
     private ListView<String> listOfSong;
 
     private static final double MIN_CHANGE = 0.5;
@@ -60,8 +70,90 @@ public class Controller implements Initializable {
     MediaPlayer mediaPlayer = new MediaPlayer(media);
 
 
+    @FXML
+    private void LoadMusic(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("music.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Music");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            System.out.println("Cant load new window");
+        }
+    }
+
+    @FXML
+    private void LoadVideo(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("video.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Video");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            System.out.println("Cant load new window");
+        }
+    }
+
+    @FXML
+    private void LoadSlide(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("slide.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Slide");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            System.out.println("Cant load new window");
+        }
+    }
+
+    @FXML
+    private void LoadText(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("text.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Text");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            System.out.println("Cant load new window");
+        }
+    }
+
+    @FXML
+    private void LoadDocument(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("document.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Document");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            System.out.println("Cant load new window");
+        }
+    }
 
 
+    @FXML
+    private void LoadAnsware(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("answare.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Ask");
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e) {
+            System.out.println("Cant load new window");
+        }
+    }
 
     @FXML
     public void Play() {
