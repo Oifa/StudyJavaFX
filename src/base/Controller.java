@@ -190,7 +190,7 @@ public class Controller implements Initializable {
             stateSlider.valueProperty().addListener(new ChangeListener<Number>() {
                 public void changed(ObservableValue<? extends Number> ov, Number oldValue, Number newValue) {
                     currentTime.setText(String.format("%02d", newValue.intValue()));
-                    totalDuration.setText(String.format("%.2f", (volumeSlider.getValue() / 180)*6));
+                    totalDuration.setText(String.format("%2s", (int)volumeSlider.getValue()));
                 }
             });
 

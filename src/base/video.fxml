@@ -35,71 +35,11 @@
                <children>
                   <VBox layoutX="59.0" layoutY="93.0" nodeOrientation="LEFT_TO_RIGHT" pickOnBounds="false" prefWidth="190.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <JFXButton contentDisplay="TOP" prefHeight="0.0" prefWidth="2000.0" ripplerFill="WHITE" style="-fx-background-color: #1F8FE8;" text="Музыка" textFill="WHITE" VBox.vgrow="NEVER">
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../img/ic_music_video_black_48dp.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <font>
-                              <Font name="Arial Bold" size="12.0" />
-                           </font>
-                        </JFXButton>
-                        <JFXButton contentDisplay="TOP" prefHeight="0.0" prefWidth="2000.0" ripplerFill="WHITE" style="-fx-background-color: #1F8FE8;" text="Слайды" textFill="WHITE">
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../img/ic_photo_black_48dp.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <font>
-                              <Font name="Arial Bold" size="12.0" />
-                           </font>
-                        </JFXButton>
                         <JFXButton contentDisplay="TOP" prefHeight="0.0" prefWidth="2000.0" ripplerFill="WHITE" style="-fx-background-color: #1F8FE8;" text="Видео" textFill="WHITE">
                            <graphic>
                               <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../img/ic_movie_creation_black_48dp.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <font>
-                              <Font name="Arial Bold" size="12.0" />
-                           </font>
-                        </JFXButton>
-                        <JFXButton contentDisplay="TOP" prefHeight="0.0" prefWidth="2000.0" ripplerFill="WHITE" style="-fx-background-color: #1F8FE8;" text="Текст" textFill="WHITE">
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../img/ic_format_align_justify_black_48dp.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <font>
-                              <Font name="Arial Bold" size="12.0" />
-                           </font>
-                        </JFXButton>
-                        <JFXButton contentDisplay="TOP" prefHeight="0.0" prefWidth="2000.0" ripplerFill="WHITE" style="-fx-background-color: #1F8FE8;" text="Документы" textFill="WHITE">
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../img/ic_attach_file_black_48dp.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                           <font>
-                              <Font name="Arial Bold" size="12.0" />
-                           </font>
-                        </JFXButton>
-                        <JFXButton contentDisplay="TOP" prefHeight="0.0" prefWidth="2000.0" ripplerFill="WHITE" style="-fx-background-color: #1F8FE8;" text="Советы" textFill="WHITE">
-                           <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../img/ic_report_problem_black_48dp.png" />
                                  </image>
                               </ImageView>
                            </graphic>
