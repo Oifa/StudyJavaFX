@@ -13,6 +13,7 @@ import java.text.DecimalFormat;
 import javafx.application.Platform;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
+import javafx.beans.property.DoubleProperty;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -42,6 +43,7 @@ import javafx.scene.layout.Pane;
 import javafx.fxml.FXMLLoader;
 import java.io.IOException;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.MediaView;
 
 
 
@@ -62,12 +64,15 @@ public class Controller implements Initializable {
     @FXML
     private ListView<String> listOfSong;
 
+    @FXML
+    private MediaView videoView;
+
     private static final double MIN_CHANGE = 0.5;
 
+        String path = new File("src/base/vacation-1.mp3").getAbsolutePath();
+        Media media = new Media(new File(path).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(media);
 
-    File file = new File("B:\\Programs\\Java\\StudyJavaFX\\src\\base\\vacation-1.mp3");
-    Media media = new Media(file.toURI().toString());
-    MediaPlayer mediaPlayer = new MediaPlayer(media);
 
 
     @FXML
@@ -161,6 +166,7 @@ public class Controller implements Initializable {
             System.out.println("Playing...");
             mediaPlayer.play();
 
+
             /*  This code is used for the music slider.
             *   Code include: value of the music state, changing state, current time,
             *   total duration.
@@ -194,6 +200,7 @@ public class Controller implements Initializable {
                 }
             });
 
+
             /*  This code changing volume of music.
             *   Min state = 0; max state = 100
             */
@@ -214,7 +221,6 @@ public class Controller implements Initializable {
     @FXML
     public void Pause() {
         btnPause.setOnAction((ActionEvent e) -> {
-            System.out.println("PAUSE");
             mediaPlayer.pause();
         });
     }
@@ -270,7 +276,7 @@ public class Controller implements Initializable {
 
 
     @FXML
-    public void Open() {
+    private void Open() {
         btnOpen.setOnAction((ActionEvent e) -> {
             try {
                 FileChooser fileChooser = new FileChooser();
@@ -281,6 +287,9 @@ public class Controller implements Initializable {
                 media = new Media(new File(path).toURI().toString());
                 mediaPlayer.stop();
                 mediaPlayer = new MediaPlayer(media);
+                File tempFile = new File(path.trim());
+                String fileName = tempFile.getName();
+                listOfSong.getItems().addAll(fileName);
             } catch (Exception e1) {
                 System.out.println("Exit");
             }
@@ -289,9 +298,6 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-//        stateOfSong.valueProperty().addListener((observable, oldValue, newValue) -> {
-//            System.out.println("Player:" + observable + " | Changed from playing at: " + oldValue + " to play at " + newValue);
-//        });
 
 
     }

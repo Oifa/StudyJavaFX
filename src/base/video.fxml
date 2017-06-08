@@ -16,6 +16,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="videoPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="base.Controller">
@@ -142,14 +143,7 @@
                                        </graphic>
                                     </JFXButton>
                                     <Slider fx:id="volumeSlider" prefHeight="40.0" prefWidth="116.0" />
-                                 </children>
-                                 <GridPane.margin>
-                                    <Insets />
-                                 </GridPane.margin>
-                              </HBox>
-                              <HBox alignment="CENTER" GridPane.rowIndex="1">
-                                 <children>
-                                    <Label fx:id="currentTime" prefHeight="26.0" prefWidth="49.0" text="00:00" textAlignment="RIGHT">
+                                    <Label fx:id="totalDuration" prefHeight="4.0" prefWidth="49.0" text="00:00" textAlignment="RIGHT">
                                        <font>
                                           <Font size="17.0" />
                                        </font>
@@ -157,12 +151,19 @@
                                           <Insets left="2.0" />
                                        </padding>
                                     </Label>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets />
+                                 </GridPane.margin>
+                              </HBox>
+                              <HBox alignment="CENTER" GridPane.rowIndex="1">
+                                 <children>
                                     <Slider fx:id="stateSlider" max="215.0" prefHeight="24.0" prefWidth="657.0">
                                        <padding>
                                           <Insets left="2.0" />
                                        </padding>
                                     </Slider>
-                                    <Label fx:id="totalDuration" prefHeight="4.0" prefWidth="49.0" text="00:00" textAlignment="RIGHT">
+                                    <Label fx:id="currentTime" prefHeight="26.0" prefWidth="49.0" text="00:00" textAlignment="RIGHT">
                                        <font>
                                           <Font size="17.0" />
                                        </font>
@@ -179,9 +180,9 @@
                         <AnchorPane prefHeight="396.0" prefWidth="13.0" BorderPane.alignment="CENTER" />
                      </left>
                      <center>
-                        <AnchorPane prefHeight="396.0" prefWidth="604.0" BorderPane.alignment="CENTER">
+                        <AnchorPane fx:id="rootPane" prefHeight="396.0" prefWidth="604.0" BorderPane.alignment="CENTER">
                            <children>
-                              <Pane prefHeight="396.0" prefWidth="630.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <MediaView fx:id="mediaView" fitHeight="396.0" fitWidth="630.0" />
                            </children>
                         </AnchorPane>
                      </center>
