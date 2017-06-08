@@ -64,8 +64,6 @@ public class Controller implements Initializable {
     @FXML
     private ListView<String> listOfSong;
 
-    @FXML
-    private MediaView videoView;
 
     private static final double MIN_CHANGE = 0.5;
 

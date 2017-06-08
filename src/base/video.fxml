@@ -19,7 +19,7 @@
 <?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="videoPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="base.Controller">
+<AnchorPane fx:id="videoPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="base.VideoController">
    <children>
       <Pane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #1C202A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -180,9 +180,9 @@
                         <AnchorPane prefHeight="396.0" prefWidth="13.0" BorderPane.alignment="CENTER" />
                      </left>
                      <center>
-                        <AnchorPane fx:id="rootPane" prefHeight="396.0" prefWidth="604.0" BorderPane.alignment="CENTER">
+                        <AnchorPane BorderPane.alignment="CENTER">
                            <children>
-                              <MediaView fx:id="mediaView" fitHeight="396.0" fitWidth="630.0" />
+                              <MediaView fx:id="mediaView" fitHeight="389.0" fitWidth="630.0" pickOnBounds="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                            </children>
                         </AnchorPane>
                      </center>
@@ -192,11 +192,20 @@
                      <right>
                         <AnchorPane prefHeight="396.0" prefWidth="12.0" BorderPane.alignment="CENTER">
                            <children>
-                              <JFXButton fx:id="btnOpen" contentDisplay="TOP" layoutY="152.0" onAction="#Open" prefHeight="66.0" prefWidth="111.0" text="Открыть папку">
+                              <JFXButton fx:id="btnOpen" contentDisplay="TOP" layoutY="105.0" onAction="#Open" prefHeight="66.0" prefWidth="111.0" text="Открыть папку">
                                  <graphic>
                                     <ImageView fitHeight="64.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../img/ic_add_black_48dp.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </JFXButton>
+                              <JFXButton fx:id="btnOpen1" contentDisplay="TOP" onAction="#Open" prefHeight="66.0" prefWidth="111.0" text="На весь экран">
+                                 <graphic>
+                                    <ImageView fitHeight="64.0" fitWidth="98.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/ic_stop_black_48dp.png" />
                                        </image>
                                     </ImageView>
                                  </graphic>
