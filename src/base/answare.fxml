@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.image.Image?>
@@ -67,7 +68,20 @@
                      <center>
                         <AnchorPane BorderPane.alignment="CENTER">
                            <children>
-                              <VBox layoutX="150.0" layoutY="115.0" prefHeight="500.0" prefWidth="741.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                              <VBox layoutX="150.0" layoutY="115.0" prefHeight="500.0" prefWidth="741.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Hyperlink prefHeight="60.0" prefWidth="780.0" text="Начало работы с программой" />
+                                    <Hyperlink prefHeight="60.0" prefWidth="780.0" text="Музыка" />
+                                    <Hyperlink prefHeight="60.0" prefWidth="780.0" text="Слайды" />
+                                    <Hyperlink prefHeight="60.0" prefWidth="780.0" text="Видео" />
+                                    <Hyperlink prefHeight="60.0" prefWidth="780.0" text="Текст" />
+                                    <Hyperlink prefHeight="60.0" prefWidth="780.0" text="Документы" />
+                                    <Hyperlink prefHeight="60.0" prefWidth="780.0" text="Работа с кнопками управления: музыка" />
+                                    <Hyperlink prefHeight="60.0" prefWidth="780.0" text="Работа с кнопками управления: слайды" />
+                                    <Hyperlink prefHeight="60.0" prefWidth="780.0" text="Работа с кнопками управления: видео" />
+                                    <Hyperlink prefHeight="60.0" prefWidth="780.0" text="Работа с кнопками управления: текст" />
+                                    <Hyperlink prefHeight="60.0" prefWidth="780.0" text="Работа с кнопками управления: документы" />
+                                 </children></VBox>
                            </children>
                         </AnchorPane>
                      </center>

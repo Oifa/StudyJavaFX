@@ -143,7 +143,7 @@
                                        </graphic>
                                     </JFXButton>
                                     <Slider fx:id="volumeSlider" prefHeight="40.0" prefWidth="116.0" />
-                                    <Label fx:id="totalDuration" prefHeight="4.0" prefWidth="49.0" text="00:00" textAlignment="RIGHT">
+                                    <Label fx:id="totalDuration" prefHeight="4.0" prefWidth="49.0" text="00" textAlignment="RIGHT">
                                        <font>
                                           <Font size="17.0" />
                                        </font>
